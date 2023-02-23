@@ -1,0 +1,193 @@
+@use './mixin.scss';
+@use './variables.scss' as *;
+
+main {
+
+    .content_div {
+        @include mixin.container;
+        width: 100%;
+    }
+
+    /* jumbo container */
+
+    .jumbo_container {
+        background-image: url('../img/jumbotron.jpg');
+        background-size: cover;
+        height: 350px;
+    }
+
+    /* current-series container */
+
+    .currentseries_container {
+        background-color: #1C1C1C;
+        padding-bottom: 2rem;
+    }
+
+    .series_container {
+        @include mixin.container;
+        position: relative;
+        color: white;
+    }
+
+    .series_header {
+        color: white;
+        background-color: $lightblue;
+        position: absolute;
+        transform: translateY(-50%);
+        padding: 1rem 2rem;
+        font-size: 24px;
+    }
+
+    .card_image {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        object-position: top;
+        margin-bottom: 1rem;
+    }
+
+    .series_name {
+        text-transform: uppercase;
+        width: 190px;
+    }
+
+    .series_cards_container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 3rem;
+        padding: 3.5rem 1rem;
+    }
+
+    /* button */
+
+    .load_more_button {
+        display: inline-block;
+        position: relative;
+        left: 50%;
+
+        button {
+            transform: translateX(-50%);
+            background-color: $lightblue;
+            padding: 0.5rem 3rem;
+            color: white;
+            font-size: 14px;
+            border: none;
+
+            &:hover {
+                filter: brightness(1.1);
+                box-shadow: 0 1px 10px 1px black;
+            }
+        }
+    }
+
+    /* footer part */
+
+    .top_footer_container {
+        background-color: $lightblue;
+        padding: 2rem;
+    }
+
+    .shop_ul {
+        @include mixin.flat_ul;
+        @include mixin.ul_style_none;
+        @include mixin.my_li;
+        color: white;
+        justify-content: space-between;
+    }
+
+    .shop_icon {
+        height: 60px;
+        width: 60px;
+        object-fit: contain;
+        margin-right: 10px;
+    }
+
+    .shop_li_label {
+        display: flex;
+        align-items: center;
+    }
+
+
+    /* single comic scss */
+
+
+    .comic_top_container {
+        position: relative;
+
+        .comic_cover {
+            position: absolute;
+            bottom: 30px;
+        }
+
+    }
+
+    .comic_description_container {
+        h2 {
+            color: $darkblue;
+        }
+
+        /* .buy_comic {
+            background-color: #55BA59;
+        } */
+
+        .adv_container {
+            position: relative;
+
+            .adv_img {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    .comic_detail_container {
+
+        h4,
+        span {
+            color: $darkblue;
+        }
+
+        .font-size-12 {
+            font-size: 12px;
+        }
+
+        a {
+            text-decoration: none;
+            color: $lightblue;
+        }
+
+        .merch_icon_1 {
+            width: 34px;
+            height: 37px;
+            object-fit: none;
+            object-position: top left;
+            transform: scale(1.5);
+        }
+
+        .merch_icon_2 {
+            width: 38px;
+            height: 37px;
+            object-fit: none;
+            object-position: top right;
+            transform: scale(1.5);
+        }
+
+        .merch_icon_1 {
+            width: 34px;
+            height: 37px;
+            object-fit: none;
+            object-position: top left;
+            transform: scale(1.5);
+        }
+
+        .merch_icon_1 {
+            width: 34px;
+            height: 37px;
+            object-fit: none;
+            object-position: top left;
+            transform: scale(1.5);
+        }
+    }
+
+}

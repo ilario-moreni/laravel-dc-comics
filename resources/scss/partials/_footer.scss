@@ -1,0 +1,92 @@
+@use './mixin.scss';
+@use './variables.scss' as *;
+
+footer {
+
+
+    .main_container {
+        @include mixin.container;
+    }
+
+
+    /* features container */
+
+    .features_container {
+        background-image: url('../img/footer-bg.jpg');
+        background-size: cover;
+        position: relative;
+        z-index: -2;
+    }
+
+    .features_lists_container {
+        display: flex;
+        position: relative;
+        padding: 1.5rem 0;
+        height: 100%;
+
+        h5 {
+            color: white;
+            margin: 1.5rem 0 1rem;
+        }
+    }
+
+    .features_ul {
+        @include mixin.ul_style_none;
+        width: 180px;
+    }
+
+    .features_li {
+        font-size: 12px;
+        line-height: 1.5rem;
+
+        a {
+            color: $grey;
+            z-index: 100;
+        }
+    }
+
+    .dc_logo_bg {
+        position: absolute;
+        right: 5%;
+        bottom: -20%;
+        z-index: -1;
+    }
+
+    /* socials container */
+
+    .socials_container {
+        background-color: #303030;
+        padding: 2.5rem 0;
+    }
+
+    .flex_container {
+        @include mixin.flex_container;
+    }
+
+    .sign_up_button {
+        border: 2px solid $lightblue;
+        background-color: transparent;
+        color: white;
+        padding: 1rem;
+    }
+
+    .right_socials_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .follow_us {
+        color: $lightblue;
+        cursor: pointer;
+    }
+
+    .social_icons {
+        margin-left: 1rem;
+        cursor: pointer;
+
+
+        &:hover {
+            filter: brightness(1.5);
+        }
+    }
+}
