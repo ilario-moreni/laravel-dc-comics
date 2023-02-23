@@ -56,18 +56,18 @@
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>Art by:</span>
                                 <div class='col-8'>
-                                    @foreach($comic['artists'] as $key=>$artist)
+                                   {{--  @foreach($comic['artists'] as $key=>$artist)
                                         <a class='font-size-12' href="#">{{$artist}}</a>,
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                             <hr>
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>Written by:</span>
                                 <div class='col-8'>
-                                    @foreach($comic['writers'] as $key=>$writer)
+                                    {{-- @foreach($comic['writers'] as $key=>$writer)
                                         <a class='font-size-12' href="#">{{$writer}}</a>,
-                                    @endforeach
+                                    @endforeach --}}
                                 </div>
                             </div>
                             <hr>

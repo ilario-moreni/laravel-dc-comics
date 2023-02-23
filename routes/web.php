@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PagesController as PagesController;
 use App\Http\Controllers\ComicsController as ComicsController;
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,15 @@ use App\Http\Controllers\ComicsController as ComicsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('home');
+});
 
 
 Route::resource('current_series', ComicsController::class);
-/* Route::get('/', [ComicsController::class, 'index'])->name('Comics');
+
+
+ /* Route::get('/', [ComicsController::class, 'index'])->name('Comics');
  */
 /* Route::get('/', function () {
     $comics = config('comics');

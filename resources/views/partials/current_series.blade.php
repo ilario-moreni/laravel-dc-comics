@@ -10,8 +10,8 @@
                     <div class="series_cards_container">
                         <div class="container">
                             <div class="row row-cols-6">
-                                @foreach($comics as $comic)
-                                <a href="{{ route('single', ['id' => $comic['id']-1])}}">
+                                @foreach($comics as $key=>$comic)
+                                <a href="{{ route('current_series.show', ['current_series'=>$comic['id']])}}">
                                     <div class="col my_card">
                                         <img class="card_image" src="{{$comic['thumb']}}" alt="">
                                         <p class="series_name">{{ $comic['title'] }}</p>
