@@ -74,6 +74,11 @@ main {
             font-size: 14px;
             border: none;
 
+            a {
+                color: white;
+                text-decoration: none;
+            }
+
             &:hover {
                 filter: brightness(1.1);
                 box-shadow: 0 1px 10px 1px black;
@@ -195,4 +200,8 @@ main {
         background-color: white;
     }
 
+
+    .form_container {
+        background-color: white;
+    }
 }
