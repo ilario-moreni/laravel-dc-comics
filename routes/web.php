@@ -14,8 +14,10 @@ use App\Http\Controllers\ComicsController as ComicsController;
 |
 */
 
-Route::get('/', [ComicsController::class, 'index'])->name('Comics');
 
+Route::resource('current_series', ComicsController::class);
+/* Route::get('/', [ComicsController::class, 'index'])->name('Comics');
+ */
 /* Route::get('/', function () {
     $comics = config('comics');
     return view('partials.current_series', compact('comics'));
@@ -34,4 +36,4 @@ Route::get('/', [ComicsController::class, 'index'])->name('Comics');
     return view('partials.single', compact('comics','comic'));
 })->name('single'); */
 
-Route::get('/single/{id}', [ComicsController::class, 'showSingle'])->name('Single');
+/* Route::get('/single/{id}', [ComicsController::class, 'showSingle'])->name('Single'); */
