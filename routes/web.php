@@ -14,9 +14,7 @@ use App\Http\Controllers\ComicsController as ComicsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('home');
-});
+Route::resource('home', PagesController::class);
 
 
 Route::resource('current_series', ComicsController::class);

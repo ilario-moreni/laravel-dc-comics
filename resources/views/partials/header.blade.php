@@ -20,7 +20,7 @@
                     <div class="col">
                         <ul>
                             <li>CHARACTERS</li>
-                            <li>COMICS</li>
+                            <li><a href="{{ route('current_series.index')}}">COMICS</a></li>
                             <li>MOVIES</li>
                             <li>TV</li>
                             <li>GAMES</li>
