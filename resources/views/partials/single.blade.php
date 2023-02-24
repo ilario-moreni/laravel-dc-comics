@@ -1,14 +1,13 @@
 @extends('layouts.app')
 @section('main')
-
-{{-- blue bar --}}
+    {{-- blue bar --}}
     <div class="container-fluid comic_top_container bg-primary py-5">
         <div class="row">
             <div class="col">
                 <div class="container px-5">
                     <div class="row px-5">
                         <div class="col">
-                            <img src="{{$comic['thumb']}}" alt="" class="comic_cover">
+                            <img src="{{ $comic['thumb'] }}" alt="" class="comic_cover">
                         </div>
                     </div>
                 </div>
@@ -23,17 +22,17 @@
                 <div class="container px-5">
                     <div class="row px-5">
                         <div class="col-8">
-                            <h2>{{ $comic['title']}}</h2>
+                            <h2>{{ $comic['title'] }}</h2>
                             <div class="my-4 buy_comic bg-success bg-gradient d-flex justify-content-between">
                                 <div style='width: 100%;' class='p-3 d-flex justify-content-between'>
                                     <div>U.S. Price $19.99</div>
                                     <div>AVAILABLE</div>
-                                    </div>
-                                <select class='p-3 bg-success bg-gradient'  name="" id="">
+                                </div>
+                                <select class='p-3 bg-success bg-gradient' name="" id="">
                                     <option value="">Check Availability</option>
-                                </select> 
-                           </div>
-                           <p class='text-secondary'>{{ $comic['description']}}</p>
+                                </select>
+                            </div>
+                            <p class='text-secondary'>{{ $comic['description'] }}</p>
                         </div>
                         <div class="adv_container col-4">
                             <p class='text-end'>ADVIRSEMENT</p>
@@ -43,6 +42,10 @@
                 </div>
             </div>
         </div>
+    </div>
+    {{-- edit card --}}
+    <div class="load_more_button">
+        <button><a href='{{ route('current_series.edit', ['current_series' => $comic['id']]) }}'>LOAD MORE</a></button>
     </div>
     {{-- details --}}
     <div class="pt-4 container-fluid bg-light comic_detail_container">
@@ -56,7 +59,7 @@
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>Art by:</span>
                                 <div class='col-8'>
-                                   {{--  @foreach($comic['artists'] as $key=>$artist)
+                                    {{--  @foreach ($comic['artists'] as $key => $artist)
                                         <a class='font-size-12' href="#">{{$artist}}</a>,
                                     @endforeach --}}
                                 </div>
@@ -65,7 +68,7 @@
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>Written by:</span>
                                 <div class='col-8'>
-                                    {{-- @foreach($comic['writers'] as $key=>$writer)
+                                    {{-- @foreach ($comic['writers'] as $key => $writer)
                                         <a class='font-size-12' href="#">{{$writer}}</a>,
                                     @endforeach --}}
                                 </div>
@@ -78,21 +81,21 @@
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>Series:</span>
                                 <div class='col-8'>
-                                    <a href="">{{$comic['series']}}</a>
+                                    <a href="">{{ $comic['series'] }}</a>
                                 </div>
                             </div>
                             <hr>
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>U.S. Price:</span>
                                 <div class='col-8'>
-                                    {{$comic['price']}}
+                                    {{ $comic['price'] }}
                                 </div>
                             </div>
                             <hr>
                             <div class='d-flex justify-content-between'>
                                 <span class='col-3'>On Sale Date:</span>
                                 <div class='col-8'>
-                                    {{\Carbon\Carbon::createFromFormat('Y-m-d', $comic['sale_date'])->format('M d Y');}}
+                                    {{ \Carbon\Carbon::createFromFormat('Y-m-d', $comic['sale_date'])->format('M d Y') }}
                                 </div>
                             </div>
                             <hr>
@@ -101,7 +104,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="mt-5">
             <div class="container">
                 <div class="row">
@@ -125,6 +128,4 @@
             </div>
         </div>
     </div>
-
-
 @endsection
