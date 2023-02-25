@@ -23,7 +23,11 @@
                 </div>
             </div>
             <div class="load_more_button">
-                <button><a href='{{ route('current_series.create') }}'>LOAD MORE</a></button>
+                <a href='{{ route('current_series.create') }}'>
+                    <button>
+                        LOAD MORE
+                    </button>
+                </a>
             </div>
         </div>
     </div>

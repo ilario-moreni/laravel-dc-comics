@@ -14,6 +14,11 @@ use App\Http\Controllers\ComicsController as ComicsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::get('/', [PagesController::class, 'index'])->name('homepage');
+
+
 Route::resource('pages', PagesController::class);
 
 

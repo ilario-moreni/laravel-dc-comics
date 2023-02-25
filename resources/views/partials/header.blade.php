@@ -27,7 +27,7 @@
                             <li>COLLECTIBLES</li>
                             <li>VIDEOS</li>
                             <li>FANS</li>
-                            <li><a href="{{ route('pages.index') }}">NEWS</a></li>
+                            <li><a href="{{ route('homepage') }}">NEWS</a></li>
                             <li>SHOP</li>
                         </ul>
                     </div>

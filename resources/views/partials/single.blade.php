@@ -106,6 +106,19 @@
             <button><a href='{{ route('current_series.edit', ['current_series' => $comic['id']]) }}'>EDIT CURRENT
                     COMIC</a></button>
         </div>
+        <br>
+
+        {{-- delete card --}}
+        <div class="py-5  delete_button">
+            <form action="{{ route('current_series.destroy', ['current_series' => $comic['id']]) }}" method='POST'>
+                @csrf
+
+                @method('DELETE')
+                <button>
+                    DELETE CURRENT COMIC
+                </button>
+            </form>
+        </div>
 
         <div class="mt-5">
             <div class="container">
