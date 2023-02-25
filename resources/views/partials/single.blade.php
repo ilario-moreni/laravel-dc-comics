@@ -25,7 +25,7 @@
                             <h2>{{ $comic['title'] }}</h2>
                             <div class="my-4 buy_comic bg-success bg-gradient d-flex justify-content-between">
                                 <div style='width: 100%;' class='p-3 d-flex justify-content-between'>
-                                    <div>U.S. Price $19.99</div>
+                                    <div>U.S. Price {{ $comic['price'] }}</div>
                                     <div>AVAILABLE</div>
                                 </div>
                                 <select class='p-3 bg-success bg-gradient' name="" id="">
@@ -42,10 +42,6 @@
                 </div>
             </div>
         </div>
-    </div>
-    {{-- edit card --}}
-    <div class="load_more_button">
-        <button><a href='{{ route('current_series.edit', ['current_series' => $comic['id']]) }}'>LOAD MORE</a></button>
     </div>
     {{-- details --}}
     <div class="pt-4 container-fluid bg-light comic_detail_container">
@@ -103,6 +99,12 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        {{-- edit card --}}
+        <div class="py-5 load_more_button">
+            <button><a href='{{ route('current_series.edit', ['current_series' => $comic['id']]) }}'>EDIT CURRENT
+                    COMIC</a></button>
         </div>
 
         <div class="mt-5">
