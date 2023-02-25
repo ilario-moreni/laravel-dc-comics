@@ -20,14 +20,14 @@
                     <div class="col">
                         <ul>
                             <li>CHARACTERS</li>
-                            <li><a href="{{ route('current_series.index')}}">COMICS</a></li>
+                            <li><a href="{{ route('current_series.index') }}">COMICS</a></li>
                             <li>MOVIES</li>
                             <li>TV</li>
                             <li>GAMES</li>
                             <li>COLLECTIBLES</li>
                             <li>VIDEOS</li>
                             <li>FANS</li>
-                            <li>NEWS</li>
+                            <li><a href="{{ route('pages.index') }}">NEWS</a></li>
                             <li>SHOP</li>
                         </ul>
                     </div>

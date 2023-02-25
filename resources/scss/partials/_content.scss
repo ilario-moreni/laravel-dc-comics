@@ -197,7 +197,36 @@ main {
     }
 
     .home_container {
-        background-color: white;
+        background: linear-gradient(149deg, rgba(12, 124, 236, 0.8), rgb(209, 222, 236) 96.71%);
+
+        h1 {
+            color: white;
+        }
+
+
+
+
+        a {
+            transition: color 0.8s;
+            color: white;
+            text-decoration: none;
+        }
+
+        .my_button_discover {
+            border: 1px solid #0C7CEC;
+            transition: background-color 0.8s;
+        }
+
+
+        .my_button_discover:hover {
+
+            border: 1px solid #0C7CEC;
+            background-color: white ! important;
+
+            a {
+                color: #0C7CEC;
+            }
+        }
     }
 
 
